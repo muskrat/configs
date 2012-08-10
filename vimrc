@@ -1,50 +1,29 @@
 " Isaac's vimrc
 
-" Enable filetype plugins
-filetype plugin indent on
+filetype plugin indent on " Enable filetype plugins
+syntax enable             " Syntax highlighting
 
-"Always show current position
-set ruler
+" General editing options
 
-" Show line numbers
-set number
-
-" Highlight search results
-" set hlsearch
-
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-
-" Enable syntax highlighting
-syntax enable
-
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
+set ruler                 " Always show current position
+set number                " Show line numbers
+set showmatch             " Show matching brackets under cursor
+set mat=2                 " tenths of second to blink when highlighting braces
+set noerrorbells          " No annoying sounds
+set expandtab             " Use spaces instead of tabs
+set shiftwidth=4          " one tab = four spaces
+set tabstop=4             " 
 set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
-set ai "Auto indent
-" set si "Smart indent (this is designed for C and causes annoying behaviour
-" with Python)
-set wrap "Wrap lines
-" word wrap linebreak between words
+set autoindent            " Automatic indentation
+set wrap                  " Wrap long lines at spaces
 set linebreak
 
-" Colourscheme, GUI, font options
-colorscheme lucius
-" Good colourschemes: zenburn, lucius, desert
-set background=dark
-set guioptions-=T
+" Appearance
+
+colorscheme molokai
+" Good colourschemes: zenburn, lucius, desert, molokai
+set background=dark       " Dark BG
+set guioptions-=T         " No toolbar or scrollbars in gvim
 set guioptions-=r
 set guioptions-=L
 
@@ -55,3 +34,11 @@ set guicursor=a:blinkon0
 
 " Working directory is always the directory of the current file
 set autochdir
+
+" Custom keybinds
+
+" Change windows with Alt + [hjkl]
+nmap <silent> <C-j> :wincmd k<CR>
+nmap <silent> <C-k> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
