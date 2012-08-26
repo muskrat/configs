@@ -20,7 +20,7 @@ set linebreak
 
 " Appearance
 
-colorscheme molokai
+colorscheme aldmeris
 " Good colourschemes: zenburn, lucius, desert, molokai
 set background=dark       " Dark BG
 set guioptions-=T         " No toolbar or scrollbars in gvim
