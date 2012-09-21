@@ -20,8 +20,10 @@ set linebreak
 
 " Appearance
 
-colorscheme aldmeris
-" Good colourschemes: zenburn, lucius, desert, molokai
+if has("gui_running")
+    colorscheme jellybeans
+endif
+
 set background=dark       " Dark BG
 set guioptions-=T         " No toolbar or scrollbars in gvim
 set guioptions-=r
