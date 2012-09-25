@@ -5,3 +5,8 @@
 *.pyc
 *~
 
+# Image files
+*.jpg
+*.png
+*.bmp
+*.gif
